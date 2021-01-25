@@ -1,6 +1,6 @@
 # Plinky wavetable generator
 
-This is a wavetable header generator for [http://www.plinkysynth.com/](Plinky).
+This is a wavetable header generator for [Plinky](http://www.plinkysynth.com/).
 
 It expects files from `c0.wav` to `c14.wav` in the same folder.
 
@@ -28,6 +28,6 @@ It should generate a `wavetable.h` which you can use in the main Plinky project-
 
 ## Credits
 
-- Code: [https://twitter.com/mmalex](@mmalex)
-- Core wavetable waves: [https://twitter.com/miunau](@miunau)
+- Code: [@mmalex](https://twitter.com/mmalex)
+- Core wavetable waves: [@miunau](https://twitter.com/miunau)
 
