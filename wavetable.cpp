@@ -153,13 +153,14 @@ float noisey(int i) {
 	return (wang_hash(i) & 65535) / 32768.f - 1.f;
 }
 Sample cycles[16];
-const char* cyclenames[16] = {
+const char* cyclenames[17] = {
 	//	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"c:/temp/ss.wav"
 		0,0,
 	"c0.wav",
 	"c1.wav",
 	"c2.wav",
 	"c3.wav",
+	"c4.wav",
 	"c5.wav",
 	"c6.wav",
 	"c7.wav",
