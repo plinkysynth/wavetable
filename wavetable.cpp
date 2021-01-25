@@ -1,11 +1,11 @@
 // compile with clang++ -O2 wavetable.cpp -o wavetable
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <math.h>
 #include <string.h>
+#include <stdlib.h>
 
 
 typedef unsigned short u16;
@@ -123,6 +123,7 @@ const char* const wavetablenames[WT_LAST] = {
 	"miunau11",
 	"miunau12",
 	"miunau13",
+	"miunau14",
 };
 #define PI 3.1415926535897932384626433832795f
 
