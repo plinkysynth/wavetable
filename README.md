@@ -29,5 +29,5 @@ It should generate a `wavetable.h` which you can use in the main Plinky project-
 ## Credits
 
 - Code: [@mmalex](https://twitter.com/mmalex)
-- Core wavetable waves: [@miunau](https://twitter.com/miunau)
+- Core wavetable waves: [@miuott](https://twitter.com/miuott)
 
