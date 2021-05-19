@@ -260,6 +260,20 @@ int main(int argc, char **argv)
 		for (int i = 0; i < 65536; ++i)
 			wshape[shape][i] = eval_wave(shape, i);
 	FILE* fh = fopen("wavetable.h", "w");
+	FILE* fb = fopen("wavetable.uf2", "wb");
+	int uf2header[32 / 4] = {
+		0x0A324655,// uf2
+		0x9E5D5157,// magic
+		0x00002000,// flags
+		0x08077000,// target addr
+		256, // block size
+		0, // block number
+		(WT_LAST * WAVETABLE_SIZE * 2 / 256), // numblocks
+		0x00ff6919, // family
+	};
+	int uf2footer[(256 - 32) / 4] = {};
+	uf2footer[(256 - 32) / 4 - 1] = 0x0AB16F30;
+	int blockoffset = 0;
 	if (fh) {
 		fprintf(fh, "// generated for WT_LAST %d WAVETABLE_SIZE %d \nconst short wavetable[%d][%d]={\n", WT_LAST, WAVETABLE_SIZE, WT_LAST, WAVETABLE_SIZE);
 	}
@@ -277,6 +291,18 @@ int main(int argc, char **argv)
 				*fdst++ = x;
 				short s = (short)(/**dst++ = */ x * (16384.f));
 				if (fh) fprintf(fh, "%d,", s);
+				if (fb) {
+					if (blockoffset == 0) {
+						fwrite(uf2header, 4, 8, fb);
+						uf2header[5]++; // increment block number
+					}
+					fwrite(&s, 2, 1, fb);
+					blockoffset += 2;
+					if (blockoffset == 256) {
+						fwrite(uf2footer, 1, 256 - 32, fb);
+						blockoffset = 0;
+					}
+				}
 			}
 			if (fh) fprintf(fh, "\n\t");
 		}
@@ -287,7 +313,16 @@ int main(int argc, char **argv)
 		fprintf(fh, "\n};\n");
 		fclose(fh);
 	}
-
+	if (fb) {
+		if (blockoffset) {
+			int zero = 0;
+			while (blockoffset < 256) {
+				blockoffset += 2;  fwrite(&zero, 1, 2, fb);
+			}
+			fwrite(uf2footer, 1, 256 - 32, fb);
+		}
+		fclose(fb);
+	}
     return 0;
 }
 
