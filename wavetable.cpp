@@ -260,7 +260,7 @@ int main(int argc, char **argv)
 		for (int i = 0; i < 65536; ++i)
 			wshape[shape][i] = eval_wave(shape, i);
 	FILE* fh = fopen("wavetable.h", "w");
-	FILE* fb = fopen("wavetable.uf2", "wb");
+	FILE* fb = fopen("wavetab.uf2", "wb");
 	int uf2header[32 / 4] = {
 		0x0A324655,// uf2
 		0x9E5D5157,// magic
@@ -295,6 +295,7 @@ int main(int argc, char **argv)
 					if (blockoffset == 0) {
 						fwrite(uf2header, 4, 8, fb);
 						uf2header[5]++; // increment block number
+						uf2header[3] += 256; // increment address.
 					}
 					fwrite(&s, 2, 1, fb);
 					blockoffset += 2;
