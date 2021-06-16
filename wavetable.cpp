@@ -84,7 +84,7 @@ const char* ParseWAV(Sample* s, const char* fname) {
 	return "error";
 }
 
-#define WAVETABLE_SIZE (1024+9) // 9 octaves, top octave is 512 samples
+#define WAVETABLE_SIZE (1022+9) // 9 octaves, top octave is 512 samples
 
 enum EWavetables {
 	WT_SAW,
@@ -326,5 +326,3 @@ int main(int argc, char **argv)
 	}
     return 0;
 }
-
-
