@@ -6,7 +6,7 @@ It expects files from `c0.wav` to `c14.wav` in the same folder.
 
 Wavs must be in this format:
 
-- 1024 or 2048 samples
+- 1022 or 2044 samples
 - 16 bits
 - mono
 
