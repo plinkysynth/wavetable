@@ -6,11 +6,11 @@ It expects files from `c0.wav` to `c14.wav` in the same folder.
 
 Wavs must be in this format:
 
-- 1024 or 2048 samples
+- a single cycle waveform, of at least 512 samples (this tool resamples it to 512)
 - 16 bits
 - mono
 
-The generator downsamples the waves for Plinky (32kHz).
+The generator downsamples the waves for Plinky (32kHz) and generates various octaves pre-filtered.
 
 ## Building
 
