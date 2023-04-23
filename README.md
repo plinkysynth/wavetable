@@ -26,13 +26,13 @@ clang++ -O2 wavetable.cpp -o wavetable
 
 It should generate a `wavetable.h` which you can use in the main Plinky project- just copy it to `Core/Src/wavetable.h` and recompile the Plinky firmware.
 
-### Prebuilt binaries
-
-There are prebuilt binaries for MacOS and Windows in the repo.
-
 ### wavetab.uf2
 
 The generator will now also generate a `wavetab.uf2` which you can just toss over to plinky! yay!
+
+### Prebuilt binaries
+
+There are prebuilt binaries for MacOS and Windows in the repo (`PlinkyWavetable.exe` for Windows and `wavetable` for MacOS)
 
 ## Credits
 
