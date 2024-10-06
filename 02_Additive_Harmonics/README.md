@@ -2,7 +2,7 @@
 
 This is a wavetable set for [Plinky](http://www.plinkysynth.com/), for use with the wavetable generator.
 
-You will find a compiled `wavetab.uf2` file in this folder that you can upload to Plinky in tunnel-of-lights mode. The process is similar to uploading [firmware to Plinky](
+You will find a compiled `wavetab.uf2` file in this folder that you can upload to Plinky in tunnel-of-lights mode. The process is similar to [uploading firmware to Plinky](
 https://plinkysynth.com/docs/build-guide-black#firmware). To revert back to the original wavetables, install `wavetab.uf2` from the folder **01_Originial_Miunau**.
 
 Format of the wav files in this folder:
