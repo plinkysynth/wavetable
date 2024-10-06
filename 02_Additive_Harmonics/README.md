@@ -22,35 +22,35 @@ In higher registers, this bank has an organ sound to it.
 
 These are the waveshapes in this folder:
 
-![](c0.png)
+![c0](c0.png)
 
-![](c1.png)
+![c1](c1.png)
 
-![](c2.png)
+![c2](c2.png)
 
-![](c3.png)
+![c3](c3.png)
 
-![](c4.png)
+![c4](c4.png)
 
-![](c5.png)
+![c5](c5.png)
 
-![](c6.png)
+![c6](c6.png)
 
-![](c7.png)
+![c7](c7.png)
 
-![](c8.png)
+![c8](c8.png)
 
-![](c9.png)
+![c9](c9.png)
 
-![](c10.png)
+![c10](c10.png)
 
-![](c11.png)
+![c11](c11.png)
 
-![](c12.png)
+![c12](c12.png)
 
-![](c13.png)
+![c13](c13.png)
 
-![](c14.png)
+![c14](c14.png)
 
 ### wavetab.uf2
 
@@ -64,7 +64,7 @@ Generated `wavetable.h` which you can use in the main Plinky project. Copy it to
 
 Try this with a basic preset so you can clearly hear what the waves are doing.
 
-Here's preset to use with the [browser-based patch editor](
+Here's a preset to use with the [browser-based patch editor](
 https://plinkysynth.github.io/editor/?p=AT4DAesEBRSATpmAAgGAAgGAAgGAAgHADAF0AgGAAgE8CAEVDwFkCwHFBQKAqgYDwAADCgUCAgABBAIEAgABBAMJAQQBAgABAgEBBQIEAgIJAQIEAgQAAgICCAECBQECBQMCAAICAgQCAgH.AgECAgEDAgECAwICATQB-CwBCDMBAf8AUAECDAECUwECSwGZFAFQSgICAhQBbGADaQADXgFuYAFrYAF5wg__)
 
 - Knob A: Sensitivity / Drive (turn this up at least a little)
