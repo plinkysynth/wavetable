@@ -1,4 +1,4 @@
-# Set 2 - Additve (Harmonics)
+# Set 2 - Additive (Harmonics)
 
 This is a wavetable set for [Plinky](http://www.plinkysynth.com/), for use with the wavetable generator.
 
@@ -19,7 +19,7 @@ The generator downsamples the waves for Plinky (32kHz) and generates various oct
 
 This set was generated with an additive generator. Think of it working like a drawbar organ, in that it lets you set an individual volume for each overtone / harmonic. The bottom graphic represents the overtones in whole-number steps, and the top graphic represents the resulting waveform.
 
-In this set, the waves were designed to add just one or two specific overtones. The result is sonically similar to a bandpass filter, emphasizing the root frequency and one or a couple narrow bands from the spectrum. If you have a parameter or the encoder on Plinky set to the shape parameter, it feels like sweeping through the overtones with this set.
+In this set, the waves were designed to add just one or two specific overtones. The result is sonically similar to a bandpass filter, emphasising the root frequency and boosting one or a couple narrow bands from the spectrum. If you have a parameter or the encoder on Plinky set to the shape parameter, you can simulate sweeping through the overtones with this wavetable set.
 
 In higher registers, this bank has an organ sound to it.
 
