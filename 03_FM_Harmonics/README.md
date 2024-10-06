@@ -1,4 +1,4 @@
-# Set 2 - FM (Harmonics)
+# Set 3 - FM (Harmonics)
 
 This is a wavetable set for [Plinky](http://www.plinkysynth.com/), for use with the wavetable generator.
 
