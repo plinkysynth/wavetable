@@ -1,4 +1,4 @@
-# Set 10 - Spectral Triangle by Meska
+# Set 11 - Spectral Triangle by Meska
 
 This is a wavetable set for [Plinky](http://www.plinkysynth.com/), for use with the wavetable generator.
 
@@ -21,7 +21,7 @@ This set was made by [Meska](https://www.youtube.com/@Meska_Statik), who has cre
 
 He writes about this set: "This is a spectral triangle. 
 The first half of the wavetable is a triangle doing amplitude modulation (AM) on itself.
-The other half is the same wave run into a spectral processor,"
+The other half is the same wave run through a spectral processor,"
 
 Here's a video Meska made to walk you through the wavetable.
 
