@@ -36,9 +36,17 @@ static inline short read_sample(Sample* s, int pos, int chan) { // resample to 3
 	return (s->samples[si * s->nchannels] * (65536 - f) + s->samples[si * s->nchannels + s->nchannels] * f) >> 16;
 }
 
+char fnamebuf[1024];
+char path[1024]="";
+char *make_filename(const char *fname) {
+	snprintf(fnamebuf, sizeof(fnamebuf), "%s%s", path, fname);
+	printf("opening file [%s]\n", fnamebuf);
+	return fnamebuf;
+}
+
 const char* ParseWAV(Sample* s, const char* fname) {
 	memset(s, 0, sizeof(*s));
-	FILE* f = fopen(fname, "rb");
+	FILE* f = fopen(make_filename(fname), "rb");
 	if (!f)
 		return "cant open";
 	u32 wavhdr[3] = { 0 };
@@ -244,6 +252,17 @@ float eval_wave(int shape, int i) {
 
 int main(int argc, char **argv)
 {
+	// take the path from the last command argument 
+	strcpy(path, argv[argc - 1]);
+	if (argc==1) {
+		// strip off the last part of the path
+		char *p = strrchr(path, '/');
+		if (!p) p=strrchr(path, '\\');
+		if (p) *p = 0;
+	}
+	// add a trailing slash if not present
+	if (strlen(path) > 0 && path[strlen(path) - 1] != '/') strcat(path, "/");
+	printf("working in folder [%s]\n", path);
 	float kernel[256];
 	float totk = 0.f;
 	for (int i = 0; i < 256; ++i) {
@@ -259,8 +278,8 @@ int main(int argc, char **argv)
 	for (int shape = 0; shape < WT_LAST; ++shape)
 		for (int i = 0; i < 65536; ++i)
 			wshape[shape][i] = eval_wave(shape, i);
-	FILE* fh = fopen("wavetable.h", "w");
-	FILE* fb = fopen("wavetab.uf2", "wb");
+	FILE* fh = fopen(make_filename("wavetable.h"), "w");
+	FILE* fb = fopen(make_filename("wavetab.uf2"), "wb");
 	int uf2header[32 / 4] = {
 		0x0A324655,// uf2
 		0x9E5D5157,// magic
