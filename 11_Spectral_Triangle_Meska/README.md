@@ -25,7 +25,7 @@ The other half is the same wave run through a spectral processor,"
 
 Here's a video Meska made to walk you through the wavetable.
 
-[![Plinky: Spectral Wavetable](http://img.youtube.com/vi/ecyK2lhCuZ4/0.jpg)](http://www.youtube.com/watch?v=ecyK2lhCuZ4 "Plinky: Spectral Wavetable")
+[![My third wavetable for Plinky: Spectral Triangle](http://img.youtube.com/vi/xCfGhoqigv8/0.jpg)](http://www.youtube.com/watch?v=xCfGhoqigv8 "My third wavetable for Plinky: Spectral Triangle")
 
 These are the waveshapes in this folder:
 
